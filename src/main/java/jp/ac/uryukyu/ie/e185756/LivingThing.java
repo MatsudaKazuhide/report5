@@ -27,6 +27,12 @@ public class LivingThing {
 
     }
 
+    /**
+     * 攻撃処理をするメソッド。
+     * @param opponent
+     * 死亡判定を行う。
+     * attackに応じて乱数でダメージを算出し、opponent.wounded(damage)によりダメージ処理を実行。
+     */
     public void attack(LivingThing opponent){
         if(this.dead == false) {
             int damage = (int) (Math.random() * attack);
